@@ -1,0 +1,26 @@
+files = dir('*.bmp');
+score = zeros(230*5 ,230*5);
+images = zeros(128)
+for i = 1:1150
+     A(i) = imread(file(i).name,'bmp');
+end
+
+
+
+%% 
+for file = files'
+    A = imread(file.name,'bmp');
+    for i = 1:1150
+        B = imread(files(i).name);
+        score(i) = Distance(A,B);
+        i
+    end
+    break
+end
+%% 
+
+% %% SECTION TITLE
+% % DESCRIPTIVE TEXT
+% a = score < 0.45;
+% stem(a)
+% title(sum(a))
